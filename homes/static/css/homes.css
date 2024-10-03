@@ -1,0 +1,59 @@
+/*body{font-family: 'Inconsolata', serif}*/
+body{font-family: 'Poppins', serif;margin:0px;}
+
+:root {
+  --blue1: #e3e6fc;
+}
+
+a{color:#4287f5}
+#top-bar a{color:#000;text-decoration:none;}
+#top-bar a:hover{background-color:#b89c88;}
+a button{color:#000}
+a:active{color:#4287f5}
+
+#top-bar{width:100%;vertical-align:middle;display:flex;align-items:center;
+  justify-content:space-between;height:90px;position:absolute;background-color:#e6cdba}
+#top-bar-right{float:right;margin-right:50px;}
+#logo{margin-left:20px;font-size:.9rem;padding-right:5px;}
+#top-bar-menu-center{align-self:flex-end;}
+#top-bar-menu-center a{padding:5px 20px 5px;margin-right:20px;}
+#top-bar-right{min-width:120px;}
+
+.space-30{min-height:30px;width:100%}
+.space-90{min-height:90px;width:100%}
+.space-120{min-height:120px;width:100%}
+
+#bg-index{background-image: url("/static/img/room1.jpg");background-size:cover;
+  min-height:400px;display:flex;align-items:center;justify-content:center;width:100%}
+
+#index-message{font-size:1.8rem;background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow: 10px 10px 10px;}
+
+
+
+#results-container{display:inline-block;width:68%;}
+
+
+.list-result{min-height:270px;margin:40px;border-radius:10px;min-width:500px;display:flex;border: 1px solid #CCC;}
+
+.list-result-photo{flex: 0 0 330px;height:270px;width:330px;}
+.list-result-right{flex: 1;display:flex;flex-direction:column;}
+
+@media screen and (max-width:650px) {
+  #filters{display:block;width:100%;vertical-align:top;min-height:400px;}
+  #results-container{display:block;width:100%;}
+}
+
+.list-result-title{height:40px;display:flex;align-items:center;font-weight:bold;color:#4287f5;padding-left:15px;}
+.list-result-price{height:40px;padding-left:15px;}
+.list-result-info{height:40px;overflow:auto;font-weight:bold;padding-left:15px;}
+.list-result-description{height:80px;overflow:hidden;padding-top:10px;padding-bottom:10px;line-height:22px;padding-left:15px;}
+.list-result-footer{height:30px;display:flex;align-items:end;border-top:1px solid #CCC;padding-left:15px;}
+.price{font-size:1.4em;font-weight:bold}
+.list-result-footer-contact{padding:0px 10px;}
+.list-result-footer-phone{padding:0px 20px;}
+
+#apply-filters-button{float:right;}
+
+div.list-result-photo img {border-top-left-radius:10px;border-bottom-left-radius:10px}
+
+#featured-homes-header{padding:30px;padding-bottom:0px;}

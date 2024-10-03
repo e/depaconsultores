@@ -1,0 +1,59 @@
+{% extends "homes/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="space-90"></div>
+
+<div id="featured-homes-container">
+  <div id="featured-homes-header">
+    <h3>Inmuebles para compartir</h3>
+  </div>
+  {% for result in results %}
+
+    <div class="list-result">
+      <div class="list-result-photo"><img src="{{ result.pic.url }}" width="330" height="270"></div>
+      <div class="list-result-right">
+        <div class="list-result-title">
+          {{ result.title }}
+        </div>
+        <div class="list-result-price">
+          <span class="price">{{ result.price }}</span> €
+        </div>
+        <div class="list-result-info">
+          {{ result.n_rooms }} hab.
+          {% if result.size %}
+            {{ result.size }}
+            m<sup>2</sup>.
+          {% else %}
+            -
+          {% endif %}
+          {{ result.get_floor_display }}
+          {% if result.elevator %}}
+            {% translate 'con' %}
+          {% else %}
+            {% translate 'sin' %}
+          {% endif %}
+            {% translate 'ascensor' %}
+        </div>
+        <div class="list-result-description">
+          {{ result.description }}
+        </div>
+        <div class="list-result-footer">
+          <div class="list-result-footer-contact"><a href="">Contactar</a></div>
+          <div class="list-result-footer-phone"><a href="">Ver telefono</a></div>
+        </div>
+      </div>
+    </div>
+
+  {% endfor %}
+
+</div>
+{% endblock content %}
+
+{% block afterfooter %}
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmZWJ_ghW10uh_Q7WszVOMOu6J5GOed50&libraries=places"></script>
+  <script src="{% static 'js/index_autocomplete.js' %}"></script>-->
+{% endblock afterfooter %}

@@ -1,0 +1,47 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% translate "Depa Consultores" %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/homes.css' %}">
+    <meta name="keywords" content="real estate, alquiler viviendas, alquiler pisos, venta viviendas, venta pisos" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div id="top-bar">
+        <a href="{% url 'homes:index' %}"><div id="logo"><img src="{% static 'img/dc-logo3.jpg' %}"><br/>{% translate "Depa Consultores" %}</div></a>
+        <div id="top-bar-menu-center">
+          <a href="{% url 'homes:sale' %}">Comprar</a>
+          <a href="{% url 'homes:rent' %}">Alquilar</a>
+          <a href="{% url 'homes:rooms' %}">Habitaciones</a>
+        </div>
+        <div id="top-bar-right">
+        </div>
+      </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+    <!-- Footer -->
+    <footer>
+        <div class="space-30 footer-border-bottom"></div>
+        <div id="footer-container">
+            <div class="footer-links-about">
+                <nav>
+                    <h3>{% translate "Sobre nosotros" %}</h3>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    {% block afterfooter %}
+    {% endblock %}
+  </body>
+</html>
